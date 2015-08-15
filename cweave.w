@@ -867,10 +867,11 @@ convention, but do not allow the string to be longer than |longest_name|.
       if (++id_loc<=section_text_end) *id_loc=c;
       break;
     }
-    if (c=='\\') if (loc>=limit) continue;
+    if (c=='\\') { if (loc>=limit) continue;
       else if (++id_loc<=section_text_end) {
         *id_loc = '\\'; c=*loc++;
       }
+    }
     if (++id_loc<=section_text_end) *id_loc=c;
   }
   if (id_loc>=section_text_end) {
