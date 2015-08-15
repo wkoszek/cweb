@@ -1605,8 +1605,9 @@ if (c=='@@') {
     loc-=2; if (phase==2) *(tok_ptr-1)=' '; goto done;
   }
 }
-else if (c=='\\' && *loc!='@@')
+else if (c=='\\' && *loc!='@@') {
   if (phase==2) app_tok(*(loc++)) else loc++;
+}
 
 @ We output
 enough right braces to keep \TEX/ happy.
