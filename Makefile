@@ -50,7 +50,7 @@ TCHANGES=
 WCHANGES=
 
 # We keep debugging info around, for fun, but most users don't need it
-CFLAGS = -g
+CFLAGS = -g -Wno-pointer-sign
 #CFLAGS = -O
 LINKFLAGS = -g
 #LINKFLAGS = -s # for smaller (stripped) executables on many UNIX systems
