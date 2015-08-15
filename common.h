@@ -145,7 +145,7 @@ extern char scn_file_name[]; /* name of |scn_file| */
 extern char file_name[][max_file_name_length];
   /* stack of non-change file names */
 extern char change_file_name[]; /* name of change file */
-extern char line[]; /* number of current line in the stacked files */
+extern int line[]; /* number of current line in the stacked files */
 extern int change_line; /* number of current line in change file */
 extern boolean input_has_ended; /* if there is no more input */
 extern boolean changing; /* if the current line is from |change_file| */
