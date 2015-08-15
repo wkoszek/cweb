@@ -120,9 +120,9 @@ extern void print_section_name(), sprint_section_name();
 @d confusion(s) fatal("! This can't happen: ",s)
 
 @<Common...@>=
-extern history; /* indicates how bad this run was */
-extern err_print(); /* print error message and context */
-extern wrap_up(); /* indicate |history| and exit */
+extern int history; /* indicates how bad this run was */
+extern void err_print(); /* print error message and context */
+extern int wrap_up(); /* indicate |history| and exit */
 extern void fatal(); /* issue error message and die */
 extern void overflow(); /* succumb because a table has overflowed */
 
@@ -135,7 +135,7 @@ extern void overflow(); /* succumb because a table has overflowed */
 @d cur_line line[include_depth] /* number of current line in current file */
 
 @<Common code...@>=
-extern include_depth; /* current level of nesting */
+extern int include_depth; /* current level of nesting */
 extern FILE *file[]; /* stack of non-change files */
 extern FILE *change_file; /* change file */
 extern char C_file_name[]; /* name of |C_file| */
@@ -145,14 +145,14 @@ extern char scn_file_name[]; /* name of |scn_file| */
 extern char file_name[][max_file_name_length];
   /* stack of non-change file names */
 extern char change_file_name[]; /* name of change file */
-extern line[]; /* number of current line in the stacked files */
-extern change_line; /* number of current line in change file */
+extern char line[]; /* number of current line in the stacked files */
+extern int change_line; /* number of current line in change file */
 extern boolean input_has_ended; /* if there is no more input */
 extern boolean changing; /* if the current line is from |change_file| */
 extern boolean web_file_open; /* if the web file is being read */
-extern reset_input(); /* initialize to read the web file and change file */
-extern get_line(); /* inputs the next line */
-extern check_complete(); /* checks that all changes were picked up */
+extern void reset_input(); /* initialize to read the web file and change file */
+extern int get_line(); /* inputs the next line */
+extern void check_complete(); /* checks that all changes were picked up */
 
 @ Code related to section numbers:
 @<Common code...@>=
