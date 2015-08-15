@@ -1409,7 +1409,7 @@ standard as the names of the functions. (For example, some \CEE/ environments
 have \.{<string.h>} where others have \.{<strings.h>}.)
 
 @<Predecl...@>=
-extern int strlen(); /* length of string */
+extern size_t strlen(); /* length of string */
 extern int strcmp(); /* compare strings lexicographically */
 extern char* strcpy(); /* copy one string to another */
 extern int strncmp(); /* compare up to $n$ string characters */
