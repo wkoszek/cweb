@@ -213,7 +213,7 @@ extern char scn_file_name[];
 extern char file_name[][max_file_name_length];
 
 extern char change_file_name[];
-extern char line[];
+extern int line[];
 extern int change_line;
 extern boolean input_has_ended;
 extern boolean changing;
@@ -1155,8 +1155,8 @@ mistake:/*64:*/
 switch(c){
 case'+':if(*loc=='+')compress(plus_plus);break;
 case'-':if(*loc=='-'){compress(minus_minus);}
-else if(*loc=='>')if(*(loc+1)=='*'){loc++;compress(minus_gt_ast);}
-else compress(minus_gt);break;
+else if(*loc=='>'){if(*(loc+1)=='*'){loc++;compress(minus_gt_ast);}
+else compress(minus_gt);}break;
 case'.':if(*loc=='*'){compress(period_ast);}
 else if(*loc=='.'&&*(loc+1)=='.'){
 loc++;compress(dot_dot_dot);
