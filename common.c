@@ -297,7 +297,7 @@ void scan_args();
 /*:69*//*81:*/
 #line 1411 "common.w"
 
-extern int strlen();
+extern size_t strlen();
 extern int strcmp();
 extern char*strcpy();
 extern int strncmp();
