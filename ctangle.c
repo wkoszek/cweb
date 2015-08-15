@@ -194,16 +194,16 @@ extern void print_section_name(),sprint_section_name();
 /*:9*//*10:*/
 #line 122 "common.h"
 
-extern history;
-extern err_print();
-extern wrap_up();
+extern int history;
+extern void err_print();
+extern int wrap_up();
 extern void fatal();
 extern void overflow();
 
 /*:10*//*11:*/
 #line 137 "common.h"
 
-extern include_depth;
+extern int include_depth;
 extern FILE*file[];
 extern FILE*change_file;
 extern char C_file_name[];
@@ -213,14 +213,14 @@ extern char scn_file_name[];
 extern char file_name[][max_file_name_length];
 
 extern char change_file_name[];
-extern line[];
-extern change_line;
+extern char line[];
+extern int change_line;
 extern boolean input_has_ended;
 extern boolean changing;
 extern boolean web_file_open;
-extern reset_input();
-extern get_line();
-extern check_complete();
+extern void reset_input();
+extern int get_line();
+extern void check_complete();
 
 /*:11*//*12:*/
 #line 158 "common.h"
@@ -366,7 +366,7 @@ extern sixteen_bits section_count;
 /*2:*/
 #line 77 "ctangle.w"
 
-extern int strlen();
+extern size_t strlen(const char*);
 extern int strcmp();
 extern char*strcpy();
 extern int strncmp();
