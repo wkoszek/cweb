@@ -4088,12 +4088,13 @@ finish_C(visible) /* finishes a definition or a \CEE/ part */
 @.\\B@>
     app(tok_flag+(int)(p-tok_start)); make_output(); /* output the list */
     if (out_ptr>out_buf+1)
-      if (*(out_ptr-1)=='\\')
+      if (*(out_ptr-1)=='\\') {
 @.\\6@>
 @.\\7@>
 @.\\Y@>
         if (*out_ptr=='6') out_ptr-=2;
         else if (*out_ptr=='7') *out_ptr='Y';
+      }
     out_str("\\par"); finish_line();
   }
   if (text_ptr>max_text_ptr) max_text_ptr=text_ptr;
