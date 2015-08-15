@@ -777,8 +777,8 @@ switch(c) {
     else if (*loc=='/') compress(begin_short_comment); break;
   case '+': if (*loc=='+') compress(plus_plus); break;
   case '-': if (*loc=='-') {compress(minus_minus);}
-    else if (*loc=='>') if (*(loc+1)=='*') {loc++; compress(minus_gt_ast);}
-                        else compress(minus_gt); break;
+    else if (*loc=='>') { if (*(loc+1)=='*') {loc++; compress(minus_gt_ast);}
+                          else compress(minus_gt); } break;
   case '.': if (*loc=='*') {compress(period_ast);}
             else if (*loc=='.' && *(loc+1)=='.') {
               loc++; compress(dot_dot_dot);
