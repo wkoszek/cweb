@@ -3926,9 +3926,10 @@ while (1) {
   if (b=='@@' || (b=='\\' && delim!=0))
      @<Copy a quoted character into the buffer@>
   else {
-    if (b=='\'' || b=='"')
+    if (b=='\'' || b=='"') {
       if (delim==0) delim=b;
       else if (delim==b) delim=0;
+    }
     if (b!='|' || delim!=0) {
       if (j>buffer+long_buf_size-3) overflow("buffer");
       *(++j)=b;
