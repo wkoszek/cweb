@@ -29,3 +29,8 @@ To make sure this project doesn't get broken, I configured Travis CI
 every change. In other words: each time I or anybody else will make a change
 to this repository, Travis Ci will fetch the source code and try to
 recompile the project to make sure everything builds fine
+
+# Author
+
+- Wojciech Adam Koszek, [wojciech@koszek.com](mailto:wojciech@koszek.com)
+- [http://www.koszek.com](http://www.koszek.com)
