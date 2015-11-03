@@ -30,6 +30,12 @@ every change. In other words: each time I or anybody else will make a change
 to this repository, Travis Ci will fetch the source code and try to
 recompile the project to make sure everything builds fine
 
+# Copyright
+
+For the native CWEB stuff and their licensing, see CWEB source code files.
+Everything that I added is distributed with the same license as the CWEB
+system.
+
 # Author
 
 - Wojciech Adam Koszek, [wojciech@koszek.com](mailto:wojciech@koszek.com)
